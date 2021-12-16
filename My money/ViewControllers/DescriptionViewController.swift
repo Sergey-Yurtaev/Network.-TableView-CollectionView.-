@@ -13,12 +13,25 @@ class DescriptionViewController: UIViewController {
     
     var descriptionCurrent: String!
     
+    let data = Date()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        let formate = data.getFormattedDate(format: "yyyy-MM-dd HH:mm:ss")
+        descriptionLabel.text = "\(formate)"
+        
+    
     }
 }
 
-    
+extension Date {
+   func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
+    }
+}
  
 

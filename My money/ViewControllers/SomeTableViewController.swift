@@ -11,11 +11,15 @@ class SomeTableViewController: UITableViewController {
     
     private var exchanheRateses: ExchangeRates?
     private var arreyValuesRares: [DetailsRares] = []
+    let data = Date()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Exchange Rates"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
         
         DispatchQueue.global().async {
             Networkmanager.shared.fetchData(from: URLExample.currencyURL.rawValue) {
@@ -37,7 +41,10 @@ class SomeTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = "Data time \(exchanheRateses?.timestamp ?? "No info")"
+        
+        let dateTime = data.getFormattedDate(format: "yyyy-MM-dd HH:mm:ss")
+        let section = "Data time \(dateTime)"
+
         return section
     }
     
@@ -74,5 +81,4 @@ class SomeTableViewController: UITableViewController {
         tableView.reloadData()
     }
 }
-
 
