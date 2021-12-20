@@ -36,11 +36,10 @@ class InfoCell: UICollectionViewCell {
             self.priceChangeLabel.textColor = .black
         }
         self.nameActiveLabel.text = "\(object.charCode ?? "No info")"
-        
         self.priceActiveLabel.text = "\(object.nominal ?? 0) \(object.charCode ?? "No info") = \(object.value ?? 0) RUB"
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//    }
 }

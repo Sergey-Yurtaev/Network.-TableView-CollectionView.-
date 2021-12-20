@@ -42,7 +42,7 @@ class MainCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoCell", for: indexPath) as! InfoCell
         cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.7803811535, blue: 0.7319237963, alpha: 1)
-        cell.layer.cornerRadius = 13
+        cell.layer.cornerRadius = 12
         
         let nameActive = arreyValuesRares[indexPath.row]
         cell.set(object: nameActive)
