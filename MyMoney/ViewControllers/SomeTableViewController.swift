@@ -17,21 +17,12 @@ class SomeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Exchange Rates"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        
-        DispatchQueue.global().async {
-            self.setNetwork()
-        }
-    }
-    
-    private func setNetwork() {
-        NetworkManagerURLSession.shared.fetchData(from: UrlExample.currencyURL.rawValue) {
-            exchanheRateses in
-            self.exchanheRateses = exchanheRateses
-            self.exchanheRateses?.valute?.forEach({ key, value in
-            self.arreyValuesRares.append(value)
-            })
-            self.tableView.reloadData()
-        }
+        setNetwork()
+        setupRefreshControl()
+
+//        DispatchQueue.global().async {
+//            self.setNetwork()
+//        }
     }
 
     // MARK: - Table view data source
@@ -81,3 +72,37 @@ class SomeTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Private Methods
+extension SomeTableViewController {
+    
+    private func setNetwork() {
+        NetworkManagerURLSession.shared.fetchData(from: UrlExample.currencyURL.rawValue) {
+            exchanheRateses in
+            self.exchanheRateses = exchanheRateses
+            self.exchanheRateses?.valute?.forEach({ key, value in
+                self.arreyValuesRares.append(value)
+            })
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(updateView), for: .valueChanged)
+        tableView.addSubview(refreshControl ?? UIRefreshControl())
+    }
+    
+    @objc private func updateView() {
+        NetworkManagerURLSession.shared.fetchData(from: UrlExample.currencyURL.rawValue) {
+            exchanheRateses in
+            self.exchanheRateses = exchanheRateses
+            self.exchanheRateses?.valute?.forEach({ key, value in
+                self.arreyValuesRares.append(value)
+            })
+            self.arreyValuesRares.shuffle()
+            self.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
+}
