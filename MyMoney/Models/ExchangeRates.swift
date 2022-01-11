@@ -38,6 +38,8 @@ struct DetailsRares: Decodable {
 }
 
 /*
+ JSON
+ 
      "Date": "2021-12-10T11:30:00+03:00",
      "PreviousDate": "2021-12-09T11:30:00+03:00",
      "PreviousURL": "\/\/www.cbr-xml-daily.ru\/archive\/2021\/12\/09\/daily_json.js",
@@ -51,7 +53,7 @@ struct DetailsRares: Decodable {
              "Name": "Австралийский доллар",
              "Value": 52.6975,
              "Previous": 52.6665
-         },
+         }
  */
 
 

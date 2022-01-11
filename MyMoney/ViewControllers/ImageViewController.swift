@@ -18,7 +18,7 @@ class ImageViewController: UIViewController {
         activityIndicatorView.startAnimating()
         activityIndicatorView.hidesWhenStopped = true
         
-        DispatchQueue.global().async { // выводим в глобальный поток, что бы сразу переход а потом загрузка картики 
+        DispatchQueue.global().async {
             guard let image = NetworkManagerImageURLSession.shared.fetchImage(from: UrlExample.imageURL.rawValue) else { return }
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
