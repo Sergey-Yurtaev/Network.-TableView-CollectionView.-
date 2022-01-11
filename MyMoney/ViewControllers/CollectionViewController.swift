@@ -1,5 +1,5 @@
 //
-//  MainCollectionViewController.swift
+//  CollectionViewController.swift
 //  My money
 //
 //  Created by Sergey Yurtaev on 06.12.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController {
 
     private var exchanheRateses: ExchangeRates?
     private var arreyValuesRares: [DetailsRares] = []
@@ -41,7 +41,7 @@ class MainCollectionViewController: UICollectionViewController {
         
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoCell", for: indexPath) as! InfoCell
-        cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.7803811535, blue: 0.7319237963, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         cell.layer.cornerRadius = 12
         
         let nameActive = arreyValuesRares[indexPath.row]
@@ -63,7 +63,7 @@ class MainCollectionViewController: UICollectionViewController {
 }
 
 // MARK: - Delegate
-extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: view.frame.width - 32, height: 80)
     }

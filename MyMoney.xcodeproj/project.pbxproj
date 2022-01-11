@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B51B20B275D62180069BA20 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51B20A275D62180069BA20 /* MainCollectionViewController.swift */; };
+		4B51B20B275D62180069BA20 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51B20A275D62180069BA20 /* CollectionViewController.swift */; };
 		4B51B215275F934A0069BA20 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51B213275F934A0069BA20 /* InfoCell.swift */; };
 		4B51B216275F934A0069BA20 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B51B214275F934A0069BA20 /* InfoCell.xib */; };
 		4B51B21A2760DEBE0069BA20 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51B2192760DEBD0069BA20 /* DescriptionViewController.swift */; };
@@ -20,13 +20,13 @@
 		4BC8C0E32759600A00886168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC8C0E22759600A00886168 /* Assets.xcassets */; };
 		4BC8C0E62759600A00886168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC8C0E42759600A00886168 /* LaunchScreen.storyboard */; };
 		4BC8C0F22759657A00886168 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8C0F12759657A00886168 /* TabBarViewController.swift */; };
-		4BC8C0F4275965A600886168 /* SomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8C0F3275965A600886168 /* SomeTableViewController.swift */; };
+		4BC8C0F4275965A600886168 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8C0F3275965A600886168 /* TableViewController.swift */; };
 		4BC8C0F627596AD700886168 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8C0F527596AD700886168 /* ImageViewController.swift */; };
 		5B658F54E07D56847B2D9255 /* Pods_My_money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBC83A05BD79A4DF98B6A63 /* Pods_My_money.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B51B20A275D62180069BA20 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		4B51B20A275D62180069BA20 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		4B51B213275F934A0069BA20 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4B51B214275F934A0069BA20 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		4B51B2192760DEBD0069BA20 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		4BC8C0E52759600A00886168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BC8C0E72759600A00886168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC8C0F12759657A00886168 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		4BC8C0F3275965A600886168 /* SomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTableViewController.swift; sourceTree = "<group>"; };
+		4BC8C0F3275965A600886168 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4BC8C0F527596AD700886168 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5BBC83A05BD79A4DF98B6A63 /* Pods_My_money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB802D70525A00BD4E8D1F94 /* Pods-My money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My money.release.xcconfig"; path = "Target Support Files/Pods-My money/Pods-My money.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 				E86C50D057DC68B54AAF21A2 /* Pods-My money.debug.xcconfig */,
 				DB802D70525A00BD4E8D1F94 /* Pods-My money.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,9 +148,9 @@
 		4BC8C0EE2759614F00886168 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B51B20A275D62180069BA20 /* MainCollectionViewController.swift */,
+				4B51B20A275D62180069BA20 /* CollectionViewController.swift */,
 				4BC8C0F12759657A00886168 /* TabBarViewController.swift */,
-				4BC8C0F3275965A600886168 /* SomeTableViewController.swift */,
+				4BC8C0F3275965A600886168 /* TableViewController.swift */,
 				4BC8C0F527596AD700886168 /* ImageViewController.swift */,
 				4B51B2192760DEBD0069BA20 /* DescriptionViewController.swift */,
 			);
@@ -299,8 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC8C0F4275965A600886168 /* SomeTableViewController.swift in Sources */,
-				4B51B20B275D62180069BA20 /* MainCollectionViewController.swift in Sources */,
+				4BC8C0F4275965A600886168 /* TableViewController.swift in Sources */,
+				4B51B20B275D62180069BA20 /* CollectionViewController.swift in Sources */,
 				4B81DB1B27653E8400DB2B86 /* NetworkManager.swift in Sources */,
 				4BC8C0F627596AD700886168 /* ImageViewController.swift in Sources */,
 				4BC8C0DA2759600600886168 /* AppDelegate.swift in Sources */,

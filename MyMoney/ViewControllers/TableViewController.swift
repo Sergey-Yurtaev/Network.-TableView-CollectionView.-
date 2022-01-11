@@ -1,5 +1,5 @@
 //
-//  MainTableViewController.swift
+//  TableViewController.swift
 //  My money
 //
 //  Created by Sergey Yurtaev on 02.12.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SomeTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
     
     private var exchanheRateses: ExchangeRates?
     private var arreyValuesRares: [DetailsRares] = []
@@ -19,15 +19,10 @@ class SomeTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         setNetwork()
         setupRefreshControl()
-
-//        DispatchQueue.global().async {
-//            self.setNetwork()
-//        }
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         let dateTime = data.getFormattedDate(format: "yyyy-MM-dd HH:00")
         let section = "Data time \(dateTime)"
         return section
@@ -73,7 +68,7 @@ class SomeTableViewController: UITableViewController {
 }
 
 // MARK: - Private Methods
-extension SomeTableViewController {
+extension TableViewController {
     
     private func setNetwork() {
         NetworkManagerURLSession.shared.fetchData(from: UrlExample.currencyURL.rawValue) {

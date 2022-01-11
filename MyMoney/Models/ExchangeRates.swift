@@ -9,8 +9,6 @@ import Foundation
 
 struct ExchangeRates: Decodable {
     let date: String?
-//    let PreviousDate: String?
-//    let PreviousURL: String?
     let timestamp: String?
     let valute: [String: DetailsRares]?
     
@@ -37,7 +35,6 @@ struct DetailsRares: Decodable {
         case emoji = "Emoji"
         case previous = "Previous"
     }
-    
 }
 
 /*
