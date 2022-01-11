@@ -12,7 +12,6 @@ class DescriptionViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     
     var descriptionCurrent: String!
-    
     let data = Date()
    
     override func viewDidLoad() {
