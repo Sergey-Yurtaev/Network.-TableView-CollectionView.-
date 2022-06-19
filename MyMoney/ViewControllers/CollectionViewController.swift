@@ -60,6 +60,9 @@ class CollectionViewController: UICollectionViewController {
     //        let detailsVC = segue.destination as! DescriptionViewController
     //    }
     
+    deinit {
+        print("CollectionViewController has been dealocated")
+    }
 }
 
 // MARK: - Delegate

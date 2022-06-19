@@ -26,4 +26,7 @@ class ImageViewController: UIViewController {
             }
         }
     }
+    deinit {
+        print("ImageViewController has been dealocated")
+    }
 }

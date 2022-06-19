@@ -58,6 +58,10 @@ class TableViewController: UITableViewController {
         arreyValuesRares.insert(moveRates, at: destinationIndexPath.row)
         tableView.reloadData()
     }
+    
+    deinit {
+        print("TableViewController has been dealocated")
+    }
 }
 
 // MARK: - Private Methods

@@ -21,6 +21,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
             tabBar.barTintColor = .white
         }
     }
+    
+    deinit {
+        print("TabBarViewController has been dealocated")
+    }
 }
 
 

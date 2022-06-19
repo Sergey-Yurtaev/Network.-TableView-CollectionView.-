@@ -20,6 +20,10 @@ class DescriptionViewController: UIViewController {
         let formate = data.getFormattedDate(format: "yyyy-MM-dd HH:mm")
         descriptionLabel.text = "Data time: \(formate)"
     }
+    
+    deinit {
+        print("DescriptionViewController has been dealocated")
+    }
 }
 
 extension Date {
